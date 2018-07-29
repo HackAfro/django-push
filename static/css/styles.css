@@ -1,0 +1,73 @@
+body {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.87);
+    font-family: 'PT Sans', sans-serif;
+}
+
+div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    margin: 10% auto;
+}
+
+form > h3 {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: orangered;
+    text-transform: uppercase;
+}
+
+form > .error {
+    margin: 0;
+    font-size: 15px;
+    font-weight: normal;
+    color: orange;
+    opacity: 0.7;
+}
+
+form > input, form > textarea {
+    border: 3px solid orangered;
+    box-shadow: unset;
+    padding: 13px 12px;
+    margin: 12px auto;
+    width: 80%;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+form > input:focus, form > textarea:focus {
+    border: 3px solid orangered;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    outline: unset;
+}
+
+form > button {
+    justify-self: center;
+    padding: 12px 25px;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: orangered;
+    color: white;
+    border: none;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    cursor: pointer;
+}
+
+form > button:disabled {
+    background: dimgrey;
+    cursor: not-allowed;
+}
+

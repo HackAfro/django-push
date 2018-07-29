@@ -1,0 +1,6 @@
+
+.idea/
+.vscode/
+db.sqlite3
+test.http
+venv/
