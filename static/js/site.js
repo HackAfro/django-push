@@ -1,5 +1,5 @@
 const pushForm = document.getElementById('send-push__form');
-const errorMsg = [...document.getElementsByClassName('error')][0];
+const errorMsg = document.querySelector('.error');
 
 pushForm.addEventListener('submit', async function (e) {
     e.preventDefault();

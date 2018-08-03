@@ -5,7 +5,7 @@ const showNotAllowed = (message) => {
 };
 
 
-function urlB64ToUint8Array(base64String) {
+function urlB64ToUnit8Array(base64String) {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
     const base64 = (base64String + padding)
         .replace(/\-/g, '+')
@@ -40,11 +40,11 @@ const initialiseState = (reg) => {
         return
     }
     if (!'PushManager' in window) {
-        showNotAllowed('Push isnt allowed in your browser 🤔');
+        showNotAllowed("Push isn't allowed in your browser 🤔");
         return
     }
     subscribe(reg);
-};
+}
 
 const subscribe = async (reg) => {
     const subscription = await reg.pushManager.getSubscription();
@@ -58,7 +58,7 @@ const subscribe = async (reg) => {
     const options = {
         userVisibleOnly: true,
         // if key exists, create applicationServerKey property
-        ...(key && {applicationServerKey: urlB64ToUint8Array(key)})
+        ...(key && {applicationServerKey: urlB64ToUnit8Array(key)})
     };
 
     const sub = await reg.pushManager.subscribe(options);
@@ -86,7 +86,7 @@ const sendSubData = async (subscription) => {
 };
 
 const handleResponse = (res) => {
-   console.log(res.status);
+    console.log(res.status);
 };
 
 registerSw();

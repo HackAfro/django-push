@@ -28,3 +28,4 @@ urlpatterns = [
                   path('webpush/', include('webpush.urls')),
                   path('sw.js', TemplateView.as_view(template_name='sw.js', content_type='application/x-javascript'))
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
